@@ -2,6 +2,7 @@ $(document).ready( function() {
 
   var play = function(note) {
     if (note == 'a') {
+      // Loading the file first, ensures that the files can be played again
       $('#aAudio').get(0).load();
       $('#aAudio').get(0).play();
     } else if (note == 'b') {
@@ -26,6 +27,7 @@ $(document).ready( function() {
   };
 
   $( ".note" ).click(function() {
+    // Grab the second class of the instrument element and pass that to play
     var noteClass = $(this).attr('class').split(' ')[1];
     console.log(noteClass);
     play(noteClass);
