@@ -25,32 +25,10 @@ $(document).ready( function() {
     }
   };
 
-  $( ".a" ).click(function() {
-    play("a");
-  });
-
-  $( ".c" ).click(function() {
-    play("c");
-  });
-
-  $( ".d" ).click(function() {
-    play("d");
-  });
-
-  $( ".e" ).click(function() {
-    play("e");
-  });
-
-  $( ".f" ).click(function() {
-    play("f");
-  });
-
-  $( ".g" ).click(function() {
-    play("g");
-  });
-
-  $( ".b" ).click(function() {
-    play("b");
+  $( ".note" ).click(function() {
+    var noteClass = $(this).attr('class').split(' ')[1];
+    console.log(noteClass);
+    play(noteClass);
   });
 
   $('body').keydown(function(event){
