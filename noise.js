@@ -4,7 +4,7 @@ $(document).ready( function() {
     var tune = note + "Audio";
     // Load is called first, to allow for multiple plays of a note
     $(tune).get(0).load();
-    $(tune).get(0).play();g
+    $(tune).get(0).play();
   };
 
   $( ".note" ).click(function() {
